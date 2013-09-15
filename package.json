@@ -32,7 +32,7 @@
   "keywords": [
     "sounds",
     "audio",
-    "events"
+    "events",
     "aop",
     "interception",
     "hooks",

@@ -23,11 +23,11 @@ describe('Given using purr',function(){
 	var scarlet = new Scarlet("../lib");
 	var purr = scarlet.plugins.purr;
 
-	function anyFunction(){}
+	var anyFunction = function anyFunction(){};
 
 	it("Should be able to play a defined sound when method is called",function(done){
 		anyFunction = purr.when(anyFunction).play('purr',function(error, result){
-			assert(error == null);
+			assert(error === null);
 			done();
 		});
 
@@ -36,7 +36,7 @@ describe('Given using purr',function(){
 
 	it("Should be able to play a sound path when method is called",function(done){
 		anyFunction = purr.when(anyFunction).play(path.resolve('./lib/sounds/wav/moo.wav'),function(error, result){
-			assert(error == null);
+			assert(error === null);
 			done();
 		});
 
