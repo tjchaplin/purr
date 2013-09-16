@@ -9,13 +9,13 @@ purr
 
 ## Purpose
 
-A module that allows you to do make any kinda sounds when methods get called or error.  Can be used with CLI's or any other modules you are working with
+A module that allows you to make sounds when methods get called or error.  Can be used with CLI's or any other modules you are working with.
 
-This module is a scarlet plugin, and uses events on method calls to play sounds
+This module is a scarlet plugin, and uses events on method calls to play sounds.
 
 ## Examples
 
-When a objects function is called make a purr sound
+When a objects function is called, make a purr sound
 ```javascript
 var Scarlet = require('scarlet');
 var scarlet = new Scarlet('purr');
@@ -30,13 +30,13 @@ Math.min(1,2,3);
 When a objects function is called make a sound using the predefined sounds
 ```javascript
 var Scarlet = require('scarlet');
-var scarlet = new Scarlet('bomb');
+var scarlet = new Scarlet('purr');
 var purr = scarlet.plugins.purr;
 
-purr.when(Math,'min').play();
+purr.when(Math,'min').play('bomb');
 
 Math.min(1,2,3);
-//-> a purring sound will now be played on your speakers
+//-> a bomb sound will now be played on your speakers
 ```
 
 When a objects function is called call some sound file on your computer
@@ -48,7 +48,7 @@ var purr = scarlet.plugins.purr;
 purr.when(Math,'min').play('/home/user/myCustomSoundFile.wav');
 
 Math.min(1,2,3);
-//-> a purring sound will now be played on your speakers
+//-> a sound will now be played on your speakers
 ```
 
 When a function instance is called make a purr sound
